@@ -1,0 +1,34 @@
+{
+  "name": "ng-gc-pikaday-directive",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gocardless-ng/ng-gc-pikaday-directive.git"
+  },
+  "bugs": {
+    "url": "http://github.com/gocardless-ng/ng-gc-pikaday-directive/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-karma": "git://github.com/harrison/grunt-karma.git",
+    "karma": "~0.11.0",
+    "karma-coverage": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma-opera-launcher": "~0.1.0",
+    "karma-safari-launcher": "~0.1.1",
+    "karma-growl-reporter": "~0.1.1",
+    "karma-junit-reporter": "~0.1.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "test": "grunt citest"
+  },
+  "engines": {
+    "node": "0.10.0"
+  }
+}

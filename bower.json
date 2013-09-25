@@ -1,0 +1,25 @@
+{
+  "name": "ng-gc-pikaday-directive",
+  "version": "0.1.0",
+  "main": "ng-gc-pikaday-directive.js",
+  "dependencies": {
+    "bower-angular": "git@github.com:angular/bower-angular.git#v1.2.0-rc.2",
+    "pikaday": "~1.1.0",
+    "momentjs": "~2.2.1"
+  },
+  "devDependencies": {
+    "bower-angular-mocks": "git@github.com:angular/bower-angular-mocks.git#v1.2.0-rc.2",
+    "jquery": "~2.0.3",
+    "jasmine-helpers": "git@github.com:gocardless/jasmine-helpers.git"
+  },
+  "ignore": [
+    "**/.*",
+    "*.spec.js",
+    "node_modules",
+    "components",
+    "package.json",
+    "Gruntfile.js",
+    "readme.md",
+    "karma.conf.js"
+  ]
+}
