@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       },
       ci: {
         options: {
-          reporters: ['junit']
+          browsers: ['Firefox', 'Chrome']
         }
       },
       unit: {
