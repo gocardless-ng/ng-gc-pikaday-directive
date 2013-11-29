@@ -14,7 +14,7 @@ angular.module('gc.pikaday', [
       scope: {
         date: '=',
         isRequired: '=',
-        options: '&'
+        options: '=?'
       },
       replace: true,
       template: '<input type="text" ng-model="date" ng-required="isRequired">',
@@ -35,9 +35,17 @@ angular.module('gc.pikaday', [
           }
         };
 
-        var options = scope.options() || {};
-        var pikadayOptions = angular.extend({}, pikadayDefault, options);
-        var pikaday = new $window.Pikaday(pikadayOptions);
+        function getOptions(options) {
+          return angular.extend({}, pikadayDefault, angular.copy(options));
+        }
+
+        var pikaday = new $window.Pikaday(getOptions(scope.options));
+
+        // if options change, set pikaday config again
+        scope.$watch('options', function() {
+          pikaday.config(getOptions(scope.options));
+          pikaday.draw();
+        });
 
         // Get out of Angulars event loop with setTimeout
         // pikaday.setDate calls 'onSelect' which calls scope.$apply
